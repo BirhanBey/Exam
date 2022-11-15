@@ -1,30 +1,5 @@
 var rl = require("readline-sync");
 
-// let returnMessage = "";
-// const name = rl.question("what is yor name? ");
-// const surname = rl.question("What is your surname? ");
-// const address = rl.question("What is your address adn box number? ");
-// const postcode = rl.question("What is your postcode? ");
-// var municipality = rl.question('What is municipality ');
-
-// let barLine = "";
-// let lastName,lastSurname = "";
-
-// if (address.length > 40){
-//     returnMessage = "Kader is te breed. Gebruik afkortingen in de breedste stukken."
-// }
-// if ( postcode < 1000 || postcode >9900){
-//     returnMessage =  "Minstens één van de ingevulde velden is niet geldig!"
-// }
-// if( name.length == 0 && surname.length == 0){
-//     returnMessage = "Minstens één van de ingevulde velden is niet geldig!"
-// }else {
-//     lastName = name[0].toUpperCase()+'.';
-//     lastSurname = surname[0].toUpperCase() + surname.substring(1);
-// }
-
-// returnMessage = barLine+"\n |  "+ lastName+" "+lastSurname+'\n |'+ address+'\n |'+postcode+" "+municipality+"\n"+barLine;
-
 function Oefening1() {
   const name = rl.question("what is yor name? ");
   const surname = rl.question("What is your surname? ");
@@ -76,11 +51,11 @@ function Oefening1() {
         line02 += " ";
       }
     }
-    const pgSum = postcode.length + municipality.length + 1;
+    const pgSum = postcode.length + municipality.length+1;
 
-    for (let i = 0; i < 44 - pgSum.length; i++) {
+    for (let i = 0; i < 44 - pgSum; i++) {
       if (i == 2) {
-        line03 += postcode+" "+municipality;
+        line03 += postcode + " " + municipality;
       } else {
         line03 += " ";
       }
@@ -88,18 +63,16 @@ function Oefening1() {
     for (let i = 0; i < line01.length; i++) {
       topBottomLine += "-";
     }
-    
+
     return (
       topBottomLine +
       "\n|" +
       line01 +
-      "|" +
-      "\n|" +
+      "|\n|" +
       line02 +
-      "|" +
-      "\n| " +
+      "|\n|" +
       line03 +
-      " |\n" +
+      "|\n" +
       topBottomLine
     );
   }
