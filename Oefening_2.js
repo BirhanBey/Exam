@@ -47,11 +47,10 @@ Oefening.prototype.leftAppend = function (x) {
     return x+this.sentence;
 };
 oneSentence = new Oefening(
-  "afisdfkiaşsdkf aişsldfaişdslk iasldkfialsd aişsldk faişlws",
+  "This is a temporary sentence.",
   10
 );
 
-console.log(oneSentence.rightAppend(" sonu"));
-console.log(oneSentence.leftAppend("başı"));
+console.log(oneSentence.capitalsCount());
 
 
