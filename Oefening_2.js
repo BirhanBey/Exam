@@ -53,3 +53,5 @@ oneSentence = new Oefening(
 
 console.log(oneSentence.rightAppend(" sonu"));
 console.log(oneSentence.leftAppend("başı"));
+
+
